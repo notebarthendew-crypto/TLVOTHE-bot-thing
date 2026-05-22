@@ -1,1 +1,14 @@
+{
+    "cafeteria": {
+        "front": "lounge",
+        "back": "storage"
+    },
 
+    "lounge": {
+        "back": "cafeteria"
+    },
+
+    "storage": {
+        "front": "cafeteria"
+    }
+}
