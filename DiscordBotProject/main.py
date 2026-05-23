@@ -16,6 +16,9 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='?', intents=intents)
 
+from cogs.commands import setup_commands
+
+setup_commands(bot)
 
 @bot.event
 async def on_ready():
