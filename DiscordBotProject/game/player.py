@@ -8,6 +8,6 @@ def create_player(user_id):
         "room": "cafeteria",
         "alive": True,
         "role": None,
-        "inventory": []
-        "status": []
+        "inventory": [],
+        "status": [],
     }
