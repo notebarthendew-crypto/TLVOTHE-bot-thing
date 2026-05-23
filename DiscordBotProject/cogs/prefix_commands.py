@@ -5,7 +5,7 @@ def setup_commands(bot):
 
     @bot.command()
     async def hello(ctx):
-        await ctx.send("hi")
+        await ctx.send(f"hi {ctx.author.mention}")
 
     @bot.command()
     async def reply(ctx):
@@ -13,4 +13,4 @@ def setup_commands(bot):
     
     @bot.command()
     async def cheese(ctx):
-        await ctx.send("cheese")
+        await ctx.send("https://tenor.com/view/crowpunk-cheese-challenge-repost-to-cheese-cat-cheese-cat-gif-4123783956472567463")
