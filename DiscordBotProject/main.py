@@ -23,7 +23,6 @@ from cogs.prefix_commands import setup_commands as setup_prefix_commands
 from cogs.game_commands import setup_commands as setup_game_commands
 from cogs.message_commands import setup_commands as setup_message_events
 
-setup_message_events(bot)
 setup_slash_commands(bot)
 setup_prefix_commands(bot)
 setup_game_commands(bot)
