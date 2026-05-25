@@ -64,6 +64,8 @@ There are 3 main roles in TLVOTHE:
     - Survive, while doing your own personal objectives.
     - Help the Vigilante decipher who the murderer is.
 
+The good guys (Passenger, Vigilante) win by having all of the members of the other team dead, and vice-versa.
+
 1-2 sub-roles per main role are planned to get added later on.
 
 ----- SOUND SYSTEM ----
