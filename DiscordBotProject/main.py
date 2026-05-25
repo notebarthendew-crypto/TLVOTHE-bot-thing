@@ -19,7 +19,9 @@ bot = commands.Bot(command_prefix='?', intents=intents)
 from cogs.commands import setup_commands as setup_slash_commands
 from cogs.prefix_commands import setup_commands as setup_prefix_commands
 from cogs.game_commands import setup_commands as setup_game_commands
+from cogs.message_events import setup_commands as setup_message_events
 
+setup_message_events(bot)
 setup_slash_commands(bot)
 setup_prefix_commands(bot)
 setup_game_commands(bot)
@@ -51,32 +53,6 @@ async def on_guild_join(guild):
                 "...Although I should be somewhere else...."
             )
             break
-
-@bot.event
-async def on_member_join(member):
-    await member.send("hello hi welcome how are you this is a test but yeah")
-
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    if "hello gm" in message.content.lower():
-        await message.channel.send(f"yo whatup {message.author.mention}")
-
-    if "gm sucks" in message.content.lower():
-        await message.channel.send(f"you aint getting in blud")
-
-    if "fuck" in message.content.lower():
-        await message.channel.send("https://tenor.com/view/ui-mama-anime-bozo-settle-down-bozo-ui-bozo-anime-gif-16754421357059991258")
-
-    if "omg gm is so handsome" in message.content.lower():
-        await message.channel.send("https://tenor.com/view/at-ease-ladies-dr-umar-calm-down-relax-chill-take-it-easy-gif-15917197958281975855")
-
-    if "help" in message.content.lower():
-        await message.channel.send("-# *NO ONE IS AROUND TO HELP YOU.*")
-
-    await bot.process_commands(message)
 
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
