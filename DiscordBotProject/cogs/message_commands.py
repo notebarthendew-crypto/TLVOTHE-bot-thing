@@ -1,5 +1,4 @@
 from discord.ext import commands
-from discord.ext import commands
 
 class MessageCommands(commands.Cog):
     def __init__(self, bot):
@@ -17,6 +16,3 @@ class MessageCommands(commands.Cog):
 
 async def setup_commands(bot):
     await bot.add_cog(MessageCommands(bot))
-
-def setup_commands(bot):
-    bot.add_cog(MessageCommands(bot))
