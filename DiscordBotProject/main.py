@@ -28,10 +28,8 @@ setup_game_commands(bot)
 
 @bot.event
 async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print("haha pepee popoo whoah hehehe")
+    print(f'Logged in as {bot.user.name}, {bot.user.id}')
+    print("im so fukig evil muehehehe")
 
     try:
         synced = await bot.tree.sync()
@@ -52,6 +50,10 @@ async def on_guild_join(guild):
                 "Hello! Thank you for inviting me to your server!.\n"
                 "...Although I should be somewhere else...."
             )
+            except discord.Forbidden:
+                pass
+            except discord.HTTPException as e:
+                print(f"Failed to send join message: {e}")
             break
 
 
