@@ -44,6 +44,8 @@ async def on_ready():
         activity=discord.Game("Poisoning the food...")
     )
 
+    await setup_message_events(bot)
+
 @bot.event
 async def on_guild_join(guild):
     for channel in guild.text_channels:
