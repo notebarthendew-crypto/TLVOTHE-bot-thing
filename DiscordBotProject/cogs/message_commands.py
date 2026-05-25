@@ -15,5 +15,8 @@ class MessageCommands(commands.Cog):
 
         await self.bot.process_commands(message)
 
+async def setup_commands(bot):
+    await bot.add_cog(MessageCommands(bot))
+
 def setup_commands(bot):
     bot.add_cog(MessageCommands(bot))
