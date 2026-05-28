@@ -1,5 +1,5 @@
 # The Last Voyage of the Harpy Express bot.
-This is the official discord bot made for the **objectrompa server** (not the Minecraft mod one): The Last Voyage of the harpy Express, developed in Python.
+This is the official discord bot made for the **objectrompa server** (not the Minecraft mod one): The Last Voyage of the Harpy Express, developed in Python. This GitHub repo isn't taken too seriously as its purpose is listed on the last part of this README.
 
 ---
 
