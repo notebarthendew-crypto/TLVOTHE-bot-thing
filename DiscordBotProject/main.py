@@ -26,6 +26,7 @@ from cogs.message_commands import setup_commands as setup_message_events
 setup_slash_commands(bot)
 setup_prefix_commands(bot)
 setup_game_commands(bot)
+setup_message_event(bot)
 
 @bot.event
 async def on_ready():
