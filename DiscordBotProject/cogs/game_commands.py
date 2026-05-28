@@ -9,6 +9,8 @@ GAME_ROLE_ID = 1441798643576471773 # "Passenger" role
 
 def setup_commands(bot):
 
+    # --- PLAYER STUFF ----
+    
     @bot.tree.command(
         name="add",
         description="Add a player to the game"
@@ -70,5 +72,56 @@ def setup_commands(bot):
 
         await interaction.response.send_message(
             str(players),
+            ephemeral=True
+        )
+
+    # --- MOVEMENT STUFF ---
+
+    @bot.tree.command(
+    name="move",
+    description="Move through the train"
+    )
+
+    @app_commands.describe(
+        direction="Direction to move"
+    )
+
+    @app_commands.choices(direction=[
+        app_commands.Choice(name="Front", value="front"),
+        app_commands.Choice(name="Back", value="back")
+    ])
+
+    async def move(
+        interaction: discord.Interaction,
+        direction: app_commands.Choice[str]
+    ):
+
+        user_id = str(interaction.user.id)
+
+        if user_id not in players:
+
+            await interaction.response.send_message(
+                "*You are not in a train vrotato.*",
+                ephemeral=True
+            )
+
+            return
+
+        result = move_player(
+            players[user_id],
+            direction.value
+        )
+
+        if result is None:
+
+            await interaction.response.send_message(
+                "*You are unable to move that way... crud...*.",
+                ephemeral=True
+            )
+
+            return
+
+        await interaction.response.send_message(
+            f"*You moved to {result}.*",
             ephemeral=True
         )
