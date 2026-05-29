@@ -28,7 +28,7 @@ def setup_commands(bot):
     async def commands(ctx):
         await ctx.reply(" # TVLOTHE BOT COMMANDS\n"
                         "## Slash Commands\n"
-                        "* '/ping' Send pong.\n
+                        "* '/ping' Send pong.\n"
                         "## Prefix Commands\n
                         "* '?hello' Say hi and ping the caller\n"
                         "* '?reply' Send a discord reply to the caller\n"
