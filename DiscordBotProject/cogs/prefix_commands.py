@@ -35,5 +35,5 @@ def setup_commands(bot):
                         "* '?cheese' Send a cheese gif (not random)\n"
                         "* '?revolver' Send a Revolver (<:Revolver:1505709394057494659>) emoji"
                        )
-        print("Sent revolver prefix command")
+        print("Sent 'commands' prefix command")
 # \n
